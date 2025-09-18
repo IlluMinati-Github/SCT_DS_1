@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the population dataset
-df = pd.read_csv(r"C:\Users\Dell\Downloads\API_SP.POP.TOTL_DS2_en_csv_v2_787209\API_SP.POP.TOTL_DS2_en_csv_v2_787209.csv", skiprows=4)
+df = pd.read_csv("population.csv", skiprows=4)
 print(df.head())
 
 india = df[df["Country Name"] == "India"]
@@ -22,3 +22,4 @@ plt.xticks(rotation=45)
 plt.title(f"Top 10 Countries by Population in {year}")
 plt.ylabel("Population (millions)")
 plt.show()
+
